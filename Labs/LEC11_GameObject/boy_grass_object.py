@@ -17,10 +17,10 @@ class Ball:
     def __init__(self):
         self.x, self.y = random.randint(400, 700), 599    
         self.frame = 0
-        self.image = load_image('ball41x41.png')
+        self.image = load_image('ball21x21.png')
 
     def draw(self):
-        self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x, self.y)
+        self.image.clip_draw(self.frame * 20, 0, 20, 20, self.x, self.y)
     
     def update(self):
         self.frame = (self.frame + 1) % 1
@@ -29,16 +29,16 @@ class Ball:
 
 class Sball:
     def __init__(self):
-            self.x, self.y = random.randint(400, 700), 599    
-            self.frame = 0
-            self.image = load_image('ball21x21.png')
+        self.image = load_image('ball41x41.png')
+        self.x, self.y = random.randint(400, 700), 599    
+        self.frame = 0
 
     def draw(self):
         self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x, self.y)
     
     def update(self):
         self.frame = (self.frame + 1) % 1
-        self.y -= 5
+        self.y -= 2
 
     
     
