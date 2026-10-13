@@ -26,6 +26,13 @@ class Ball:
         self.frame = (self.frame + 1) % 1
         self.y -= 5
 
+class Sball:
+    def __init__(self):
+            self.x, self.y = random.randint(400, 700), 599    
+            self.frame = 0
+            self.image = load_image('ball21x21.png')
+    
+
  
 
     
