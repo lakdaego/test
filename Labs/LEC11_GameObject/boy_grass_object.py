@@ -26,6 +26,7 @@ class Ball:
         self.frame = (self.frame + 1) % 1
         self.y -= 5
 
+
 class Sball:
     def __init__(self):
             self.x, self.y = random.randint(400, 700), 599    
@@ -38,6 +39,8 @@ class Sball:
     def update(self):
         self.frame = (self.frame + 1) % 1
         self.y -= 5
+
+    
     
     
 
@@ -97,6 +100,8 @@ def reset_world():
     world.append(zombies)
     balls = [Ball() for i in range(20)]
     world += balls
+    sballs = [Sball() for i in range(20)]
+    world += sballs
 
 
 
