@@ -38,7 +38,7 @@ class Sball:
     
     def update(self):
         self.frame = (self.frame + 1) % 1
-        self.y -= random.randint(1, 50)
+        self.y -= random.randint(10, 50)
 
     
     
