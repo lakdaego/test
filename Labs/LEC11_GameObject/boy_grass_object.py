@@ -24,7 +24,7 @@ class Ball:
     
     def update(self):
         self.frame = (self.frame + 1) % 1
-        self.y -= 5
+        self.y -= random.randint(1, 20)
 
 
 class Sball:
