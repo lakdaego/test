@@ -31,6 +31,14 @@ class Sball:
             self.x, self.y = random.randint(400, 700), 599    
             self.frame = 0
             self.image = load_image('ball21x21.png')
+
+    def draw(self):
+        self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x, self.y)
+    
+    def update(self):
+        self.frame = (self.frame + 1) % 1
+        self.y -= 5
+    
     
 
  
