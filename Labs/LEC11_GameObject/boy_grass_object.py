@@ -13,19 +13,20 @@ class Grass:
     def update(self):
         pass
 
-class ball:
+class Ball:
     def __init__(self):
-        self.image = load_image('ball21x21.png')
+        self.x, self.y = random.randint(100, 700), 90    
         self.frame = 0
-        self.x, self.y = random.randint(100, 700), 90
+        self.image = load_image('ball41x41.png')
 
     def draw(self):
         self.image.clip_draw(self.frame * 100, 0, 100, 100, self.x, self.y)
-
+    
     def update(self):
         self.frame = (self.frame + 1) % 8
         self.x += 5
-    
+
+ 
 
     
 class Boy:
@@ -79,6 +80,10 @@ def reset_world():
     world += team
     zombies = zombie()
     world.append(zombies)
+    balls = [Ball() for i in range(19)]
+    world += balls
+
+
 
 def update_world():
     for o in world:
